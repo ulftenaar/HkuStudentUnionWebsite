@@ -10,6 +10,7 @@ body {
 margin: 0;
 background: var(--hkugeel);
 font-family: var(--f_main);
+font-size: 1.1rem;
 }
 
 .c {
@@ -50,7 +51,7 @@ text-align:center;
 }
 
 .fullpage {
-margin: 15vh 0 100px 0;
+margin: 15vh max(3vw, 20px) 100px max(3vw, 20px);
 }
 
 .page {
@@ -64,7 +65,7 @@ margin: 0 auto;
 
 .main{
 flex:2;
-min-width: min(600px, 90vw);
+min-width: min(600px, 70vw);
 padding-right: 3rem
 }
 
