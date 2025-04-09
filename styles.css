@@ -1,11 +1,10 @@
 :root {
-  --hkublauw: blue;
+  --hkublauw: #005ce6;
   --hkurood: red;
-  --hkugeel: #ffffee;
-  --f_main: sans-serif;
-  --f_title: helvetica;
+  --hkugeel: #ffffed;
+  --f_main: Font_MainText;
+  --f_title: Font_Title;
 }
-
 
 body {
 margin: 0;
@@ -57,7 +56,7 @@ margin: 15vh 0 100px 0;
 .page {
 background: var(--hkugeel);
 display: flex;
-flex-wrap: wrap;
+flex-wrap: wrap-reverse;
 flex-direction:row;
 padding: 0 min(5vw, 30px) 0 min(5vw,30px);
 margin: 0 auto;
@@ -65,15 +64,15 @@ margin: 0 auto;
 
 .main{
 flex:2;
-min-width: min(600px, 80vw);
+min-width: min(600px, 90vw);
 padding-right: 3rem
 }
 
 .side {
 flex:1;
 padding: 0 0 0 1rem;
-/*border: solid 1px;*/
-/*border-right: 0px;*/
+
+min-width: min(200px, 30vw);
 }
 
 section {
@@ -118,4 +117,29 @@ font-weight:600;
 }
 
 
+}
+
+/*Custom fonts!!!*/
+@font-face {
+font-family: Font_MainText;
+src: url(Fonts/GaramondPremrPro-SmbdSubh.otf);
+}
+
+@font-face { 
+
+src: url(Fonts/GaramondPremrPro-BdCapt);
+font-family: Font_MainText;
+font-weight: bold;
+}
+
+@font-face {
+font-family: Font_Title;
+src: url(Fonts/NewKansasMedium.otf);
+
+}
+
+@font-face {
+font-family: Font_Title;
+src: url(Fonts/NewKansasSemiBold.otf);
+font-weight:bold;
 }
