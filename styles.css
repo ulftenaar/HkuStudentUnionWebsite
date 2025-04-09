@@ -1,6 +1,7 @@
 :root {
   --hkublauw: #005ce6;
-  --hkurood: red;
+  --hkurood: #FF6400;
+  --hkuyellow: #C79F00;
   --hkugeel: #ffffed;
   --f_main: Font_MainText;
   --f_title: Font_Title;
@@ -8,6 +9,7 @@
 
 body {
 margin: 0;
+
 background: var(--hkugeel);
 font-family: var(--f_main);
 font-size: 1.1rem;
@@ -24,7 +26,9 @@ text-decoration:none;
 
 }
 
-
+li {
+  list-style-type: lower-roman;
+}
 
 img{
 object-fit:contain;
@@ -66,15 +70,18 @@ margin: 0 auto;
 .main{
 flex:2;
 min-width: min(600px, 70vw);
-padding-right: 3rem
+padding-right: 3rem;
 }
 
 .side {
 flex:1;
 padding: 0 0 0 1rem;
-
 min-width: min(200px, 30vw);
+/*position:sticky;*/
+/*align-self: flex-end;*/
+/*top: 20vh;*/
 }
+
 
 section {
 padding: 1rem 0 1rem 0;
