@@ -20,6 +20,10 @@ margin: 2rem 0.5rem 2rem 0.5rem;
 
 }
 
+html {
+scroll-padding-top: 15vh;
+}
+
 a{
 color: var(--hkurood);
 text-decoration:none;
@@ -44,6 +48,10 @@ margin: 0, 0, 0, 1rem;
 display:flex;
 justify-content: space-around;
 position:fixed;
+}
+
+.header ::before {
+display:block;
 }
 
 .header a{
