@@ -3,20 +3,19 @@
   --hkurood: #FF6400;
   --hkuyellow: #C79F00;
   --hkugeel: #ffffed;
-  --f_main: Font_MainText;
-  --f_title: Font_Title;
+  --f_main: font_maintext;
+  --f_title: font_title;
 }
 
 body {
 margin: 0;
-
 background: var(--hkugeel);
 font-family: var(--f_main);
 font-size: 1.1rem;
 }
 
 .c {
-margin: 2rem 0.5rem 2rem 0.5rem;
+margin: 2rem 0.5rem;
 
 }
 
@@ -59,14 +58,13 @@ text-align:center;
 }
 
 .fullpage {
-margin: 15vh max(3vw, 20px) 100px max(3vw, 20px);
+margin: 15vh max(3vw, 20px) 100px;
 }
 
 .page {
 background: var(--hkugeel);
 display: flex;
-flex-wrap: wrap-reverse;
-flex-direction:row;
+flex-flow: row wrap-reverse;
 padding: 0 min(5vw, 30px) 0 min(5vw,30px);
 margin: 0 auto;
 }
@@ -81,14 +79,17 @@ padding-right: 3rem;
 flex:1;
 padding: 0 0 0 1rem;
 min-width: min(200px, 30vw);
-/*position:sticky;*/
-/*align-self: flex-end;*/
-/*top: 20vh;*/
+
+/* position:sticky; */
+
+/* align-self: flex-end; */
+
+/* top: 20vh; */
 }
 
 
 section {
-padding: 1rem 0 1rem 0;
+padding: 1rem 0;
 }
 
 hr {
@@ -103,14 +104,14 @@ border: 1px solid black;
   }
 
 
-/*Gallery Section\cu */
+/* Gallery Section\cu */
 
   .GallerySection {
   Display:flex; 
   flex-direction:row;
   Align-items: center;
   justify-content: space-around;
-  padding: 1rem 0.5rem 1rem 0.5rem;
+  padding: 1rem 0.5rem;
   }
 
   .GalleryPicture{
@@ -126,6 +127,7 @@ border: 1px solid black;
   object-fit: cover; 
 
   }
+
   .GalleryText {
   Flex-direction: collumn;
   align-self:flex-start;
@@ -133,54 +135,54 @@ border: 1px solid black;
 
   }
 
-/*Fonts!! */
+/* Fonts!! */
 p {
-padding:0.3rem 0 0.3em 0;
+padding:0.3rem 0 0.3em;
 }
 
 .t {
 text-align:center;
 font-family:var(--f_title);
+
 &.title{
 font-size: 4rem;
 }
 
 &.subtitle{
 font-size: 2rem;
-padding: 0 0 0.5rem 0 
+padding: 0 0 0.5rem 
 }
 
 &.subsubtitle{
 font-size:1.3rem;
 text-align:center;
-padding: 0 0 0.5rem 0;
+padding: 0 0 0.5rem;
 font-weight:600;
 }
 
 
 }
 
-/*Custom fonts!!!*/
+/* Custom fonts!!! */
 @font-face {
-font-family: Font_MainText;
-src: url(Fonts/GaramondPremrPro-SmbdSubh.otf);
+font-family: "Font_MainText";
+src: url("Fonts/GaramondPremrPro-SmbdSubh.otf");
 }
 
 @font-face { 
-
-src: url(Fonts/GaramondPremrPro-BdCapt.otf);
-font-family: Font_MainText;
+src: url("Fonts/GaramondPremrPro-BdCapt.otf");
+font-family: "Font_MainText";
 font-weight: bold;
 }
 
 @font-face {
-font-family: Font_Title;
-src: url(Fonts/NewKansasMedium.otf);
+font-family: "Font_Title";
+src: url("Fonts/NewKansasMedium.otf");
 
 }
 
 @font-face {
-font-family: Font_Title;
-src: url(Fonts/NewKansasSemiBold.otf);
+font-family: "Font_Title";
+src: url("Fonts/NewKansasSemiBold.otf");
 font-weight:bold;
 }
