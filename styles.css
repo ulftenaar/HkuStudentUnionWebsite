@@ -53,7 +53,7 @@ position:fixed;
 flex:1 ;
 align-content:center;
 font-family: var(--f_title);
-font-size:min(1.5rem, 4vw);
+font-size:min(1.5rem, 3vw);
 text-align:center;
 }
 
@@ -71,22 +71,34 @@ margin: 0 auto;
 
 .main{
 flex:2;
-min-width: min(600px, 70vw);
+min-width: min(500px, 70vw);
 padding-right: 3rem;
+}
+
+.sidevast{
+flex:1;
+padding: 0 0 0 1rem;
+min-width: min(200px, 30vw);
+
 }
 
 .side {
 flex:1;
 padding: 0 0 0 1rem;
 min-width: min(200px, 30vw);
-
-/* position:sticky; */
-
-/* align-self: flex-end; */
-
-/* top: 20vh; */
+position:sticky;
+align-self: flex-end;
+top: 20vh;
 }
 
+@media only screen and (width <= 892px) {
+.side{
+    position:static;
+    top: 0;
+    align-self: normal;
+
+  } 
+}
 
 section {
 padding: 1rem 0;
@@ -106,34 +118,65 @@ border: 1px solid black;
 
 /* Gallery Section\cu */
 
-  .GallerySection {
+.GallerySection, .BoardSection , .CalendarSection{
   Display:flex; 
-  flex-direction:row;
+  flex-flow:row nowrap;
   Align-items: center;
   justify-content: space-around;
   padding: 1rem 0.5rem;
   }
 
-  .GalleryPicture{
+  .GalleryPicture, .BoardPicture, .CalendarPicture {
   Flex:3; 
-  aspect-ratio:1/1; 
    object-fit:cover;
   margin-right: 2rem;
   }
  
-  .GalleryPicture img {
+  .GalleryPicture, .BoardPicture ,.CalendarPicture  img {
      height: 100%;
   width: 100%;
-  object-fit: cover; 
+  object-fit: cover;
 
   }
 
-  .GalleryText {
+  .GalleryText, .BoardText, .CalendarText {
   Flex-direction: collumn;
   align-self:flex-start;
   Flex:2;
 
   }
+
+.CalendarText p  {
+font-size: 1rem;
+}
+
+summary{
+  font-family: var(--f_title);
+  font-size: 1.1rem;
+    text-align: center;
+    padding: 0 0 0 0.5rem;
+    font-weight:600;
+    font-style: italic;
+cursor: pointer;
+}
+
+details:first-of-type summary::marker,
+:is(::-webkit-details-marker) {
+  content: "+ ";
+  font-size: smaller;
+  font-family: monospace;
+  color: var(--hkurood);
+  font-weight: bold;
+}
+
+details[open]:first-of-type summary::marker {
+  content: "− ";
+  color:black;
+}
+
+details:open > summary {
+  color:var(--hkurood);
+}
 
 /* Fonts!! */
 p {
@@ -159,8 +202,21 @@ text-align:center;
 padding: 0 0 0.5rem;
 font-weight:600;
 }
+ 
+ &.sub3title{
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 0 0 0 0.5rem;
+    font-weight:600;
+    font-style: italic;
+  } 
 
 
+}
+
+.footnote {
+font-size: smaller;
+  font-style: italic;
 }
 
 /* Custom fonts!!! */
