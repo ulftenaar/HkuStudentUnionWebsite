@@ -189,6 +189,7 @@ font-family:var(--f_title);
 
 &.title{
 font-size: 4rem;
+  text-transform: capitalize;
 }
 
 &.subtitle{
