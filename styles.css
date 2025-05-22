@@ -120,7 +120,7 @@ border: 1px solid black;
 
 .GallerySection, .BoardSection , .CalendarSection{
   Display:flex; 
-  flex-flow:row nowrap;
+  flex-flow:row wrap;
   Align-items: center;
   justify-content: space-around;
   padding: 1rem 0.5rem;
@@ -136,6 +136,7 @@ border: 1px solid black;
      height: 100%;
   width: 100%;
   object-fit: cover;
+  min-width: min(300px, 50vw);
 
   }
 
@@ -143,6 +144,7 @@ border: 1px solid black;
   Flex-direction: collumn;
   align-self:flex-start;
   Flex:2;
+  min-width: 200px;
 
   }
 
